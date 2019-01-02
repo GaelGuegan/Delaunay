@@ -5,6 +5,7 @@ clf;
 % our set of points
 points(:,1) = randi(100,5,1); % x
 points(:,2) = randi(100,5,1); % y
+
 % sort by x coordinates
 points = sortrows(points,1);
 for i = 1:size(points,1)

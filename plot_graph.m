@@ -13,5 +13,5 @@ if nargin > 1
     plot(vertex_X,vertex_Y,'Linestyle','-','Color',color);
     end
 end
-
+axis('equal')
 end

@@ -25,12 +25,11 @@ for i = size(points,1):-1:1
     candidat = [];
     if angle > 180 || isequal(points(i,:),base_R) || isequal(points(i,:),base_L)
         continue;
-    elseif i==1 || size(graph,1) == 1 || norm(points(i-1,1:2)-center) > radius
+    elseif i == 1 || size(graph,1) == 1 || norm(points(i-1,1:2)-center) > radius
         candidat = points(i,:);
         break;
     else
         i_remove = (graph(:,1)==points(i,3) & graph(:,2)==base_L(3)) | (graph(:,1)==base_L(3) & graph(:,2)==points(i,3));
-        
         graph(i_remove,:) = []; % remove arete
     end
 end
